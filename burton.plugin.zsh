@@ -31,7 +31,9 @@ function prompt_burton_precmd {
 
   # First check that we have a remote
   if ! [[ ${git_remote} = "" ]]; then
-    if [[ ${git_local} = ${git_base} ]]; then
+    if [[ ${git_local} = ${git_remote} ]]; then
+      :
+    elif [[ ${git_local} = ${git_base} ]]; then
       branch_format+=" ${_prompt_burton_colors[4]}$BURTON_GIT_UNPULLED_SYMBOL%f"
     elif [[ ${git_remote} = ${git_base} ]]; then
       branch_format+=" ${_prompt_burton_colors[4]}$BURTON_GIT_UNPUSHED_SYMBOL%f"
