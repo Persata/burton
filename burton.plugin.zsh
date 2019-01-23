@@ -68,7 +68,7 @@ function prompt_burton_setup {
       "%F{83}" # 3 - Light Green
       "%F{87}" # 4 - Light Blue
       "%F{196}" # 5 - Red
-      "%F{129}" # 6 - Dark Purple
+      "%F{135}" # 6 - Purple
     )
   else
     _prompt_burton_colors=(
